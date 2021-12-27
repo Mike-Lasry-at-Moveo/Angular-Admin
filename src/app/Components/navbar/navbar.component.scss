@@ -1,0 +1,24 @@
+@mixin squared($vh) {
+    width: $vh;
+    height: $vh;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+
+    button{
+        border-radius: 25px;
+        height:30%;
+        position: relative;
+        top:30%;
+        margin:3px;
+    }
+}
+
+img {
+    position: relative;
+    top:35%;
+    @include squared(30px);
+}

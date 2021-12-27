@@ -1,16 +1,24 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+const API_BASE_URL = "http://127.0.0.1:3500/api";
+const APP_BASE_URI = "";
+
+const ADMIN_LAYOUT_SUFFIX = "admin";
+const LOGIN_LAYOUT_SUFFIX = "login";
+const SIGNUP_LAYOUT_SUFFIX = "signup";
+const SIGNUP_UPDATE_SUFFIX = "update/:id";
+
+const GET_USERS_URL = `${API_BASE_URL}/users`;
+const UPDATE_USER_URL = `${API_BASE_URL}/users/:id`;
 
 export const environment = {
-  production: false
-};
+  production: false,
+  
+  BASE_URL: APP_BASE_URI,
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+  UPDATE_SUFFIX: SIGNUP_UPDATE_SUFFIX,
+  ADMIN_SUFFIX: ADMIN_LAYOUT_SUFFIX,
+  LOGIN_SUFFIX: LOGIN_LAYOUT_SUFFIX,
+  SIGNUP_SUFFIX: SIGNUP_LAYOUT_SUFFIX,
+  
+  FETCH_USERS_URL: GET_USERS_URL,
+  USER_UPDATE_URL: UPDATE_USER_URL,
+};

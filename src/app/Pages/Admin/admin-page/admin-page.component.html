@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="content">  
+        <div class="container title">Register a User</div>
+        <div *ngIf="users && users.length>0">
+            <div class="userCard container" *ngFor="let user of users">
+                <button mat-icon-button color="primary" [routerLink]="['/update',user._id]"><mat-icon>update</mat-icon></button>    
+                {{user.lastName}} {{user.firstName}}
+                <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>    
+            </div>
+        </div>
+    </div>
+</div>
